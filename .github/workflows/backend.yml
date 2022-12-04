@@ -20,4 +20,4 @@ jobs:
       - name: push
         run: docker push ubevg/backend:latest
       - name: webhook
-        run: curl -X POST http://193.191.176.92:9000/api/webhooks/b382c6c2-651a-478c-b175-e7235edda80d
+        run: curl -X POST ${{ secrets.URL }} 
