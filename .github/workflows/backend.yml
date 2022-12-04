@@ -19,3 +19,5 @@ jobs:
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
       - name: push
         run: docker push ubevg/backend:latest
+      - name: webhook
+        run: curl -X POST http://193.191.176.92:9000/api/webhooks/b382c6c2-651a-478c-b175-e7235edda80d
